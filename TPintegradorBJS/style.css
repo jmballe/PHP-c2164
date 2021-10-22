@@ -1,0 +1,76 @@
+body{
+    overflow-x: hidden;
+}
+
+.carousel-item{
+    overflow:hidden;
+    height:95vh;
+}
+
+.bg-custom-style{
+    background-size: cover;
+    background-position: center center;
+}
+
+.carousel-item:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption {
+    /* left: 50% !important; */
+    bottom: 15% !important;
+    /* right: 7% !important; */
+    /* max-width:60%; */
+}
+ 
+.card-text{
+    font-size: 0.9rem;
+}
+
+.cuad{
+    width: 205px !important;
+}
+
+.form-sizelimited{
+    max-width: 650px !important;
+}
+
+.fs-cust8{
+    font-size: 0.9rem;
+    font-weight:100;
+    color: gray;
+}
+
+.bg-vManza{
+    background-color: #97C93E !important;
+    border-color: #97C93E !important;
+}
+
+.bg-celeste{
+    background-color: #CCE5FF !important;
+}
+
+.border{
+    border-radius: 3px;
+}
+
+.text-money{
+    font-size: 1.6rem;
+    line-height: 1.20;
+    font-weight: 400;
+    color: green;
+}
+
+.invalid{
+    position: relative;
+    bottom: 3px;
+    color: red;
+    font-size: 1rem;
+    line-height: 1 !important;
+}

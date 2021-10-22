@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tpbootstrap</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body class="mb-0 pb-0">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              
+              <a class="navbar-brand" href="#">
+                <img src="img/codoacodo.png" alt="logo" height="50">  
+                Conf Bs As
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>     
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">La conferencia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#oradores">Los oradores</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#lugar">El lugar y la fecha</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#sumarse">Conviértete en orador</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-success" href="tickets.html" > Comprar tickets</a>
+                  </li>
+                </ul>
+              </div>   
+            </div>
+          </nav>
+    </header>
+    <main>
+        <div class="row justify-content-center m-2 mt-4 gap-1">
+            <div class="border border-primary border-2 cuad text-center py-4">
+                <h5 class="fw-bold">Estudiante</h5>   
+                <p class="fw-normal">Tienen un descuento</p>
+                <p class="fw-bold">80%</p>
+                <p class="fs-cust8 mb-0">*presentar documentacion</p>
+            </div>
+            <div class="border border-success border-2 cuad text-center py-4">
+                <h5 class="fw-bold">Trainee</h5>
+                <p class="fw-normal">Tienen un descuento</p>
+                <p class="fw-bold">50%</p>
+                <p class="fs-cust8 mb-0">*presentar documentacion</p>
+            </div>
+            <div class="border border-warning border-2 cuad text-center py-4 ">
+                <h5 class="fw-bold">Junior</h5>
+                <p class="fw-normal">Tienen un descuento</p>
+                <p class="fw-bold">15%</p>
+                <p class="fs-cust8 mb-0">*presentar documentacion</p>
+            </div>
+        </div>
+        <div class="text-center pt-1">
+            <h6 class="fw-light">VENTA</h6>
+            <h2>VALOR DE TICKET $200</h2>
+      </div>
+        <div class="container form-sizelimited">
+            <div class="d-sm-flex justify-content-center mb-3 gap-2">
+                <div class="col mb-2">
+                    <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+                </div>
+                <div class="col mb-2">
+                    <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+                </div>
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" id="inputEmail3" rows="1" placeholder="Correo"></input>
+            </div>
+            <div class="d-flex justify-content-center mb-4 gap-2">
+                <div class="col">
+                    <label for="inputCantidad" class="form-label">Cantidad</label>
+                    <input type="number" min="0" class="form-control mb-2" id="inputCantidad" placeholder="Cantidad">
+                  </div>
+                <div class="col">
+                    <label for="inputCategoria" class="form-label">Categoria</label>
+                    <select id="inputCategoria" class="form-select">
+                      <option selected>Estudiante</option>
+                      <option>Trainee</option>
+                      <option>Junior</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="form-control d-flex bg-celeste text-primary p-2 ps-3 align-middle" id="totalAPagar">
+                    <p class="my-1">Total a pagar: $ &nbsp </p>
+                    <p class="mb-0 text-money" id="total"></p>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-1">
+                <div class="col">
+                    <button class="btn btn-success col-12 mb-1 text-white bg-vManza btn2" onclick="borrarRes()">Borrar</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-success col-12 mb-1 text-white bg-vManza" onclick="calcResumen()">Resumen</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="py-3 mt-2 pb-0"> 
+        <ul class="nav nav-fill p-3 bg-dark bg-gradient ">
+            <li class="nav-item"><a href="#" class="nav-link text-white text-break">Preguntas frecuentes</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-white">Contactenos</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-white">Prensa</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-white">Conferencias</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-white text-break">Términos y condiciones</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-white">Privacidad</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-white">Estudiantes</a></li>
+        </ul>
+    </footer>    
+    
+</body>
+</html>
